@@ -1,0 +1,15 @@
+   //客户端存储文件下载信息文件名称
+        String filename = "file.txt";
+        if (!f.exists()){
+            f.mkdirs();
+        }
+        File file2 = new File(local, filename);
+
+        //如果文件不存在  就创建一个空的文件
+        if (!file2.exists()) {
+            try {
+                file2.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
